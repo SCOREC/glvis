@@ -145,6 +145,9 @@ if (NOT EMSCRIPTEN)
   find_package(GLEW REQUIRED)
   list(APPEND _glvis_libraries GLEW::GLEW)
 
+  # HACK Find Omegah - this should be done in the mfem cmake config files
+  find_package(Omega_h)
+
   # Find 'glm' which is not part of the CMake standard modules
   list(APPEND GLM_DIR "../glm")
   find_package(glm QUIET HINTS ${GLM_DIR})
